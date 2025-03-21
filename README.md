@@ -2,6 +2,8 @@
 
 Адаптивний грід для відображення карток проєктів із кастомною пагінацією та слайдером зображень.
 
+Github repo: https://github.com/kkravchenko/GridCard
+
 # RUN
 
 Create .env file with param:  
