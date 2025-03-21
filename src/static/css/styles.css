@@ -1,0 +1,252 @@
+@import url('_reset.css');
+
+body,
+html {
+  font: normal normal normal 12px/1.3em -apple-system, BlinkMacSystemFont,
+    'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji';
+  margin: 0 60px;
+  background-color: #000;
+}
+
+img {
+  width: 100%;
+}
+
+.error {
+  color: tomato;
+  padding-left: 14px;
+}
+
+.cards-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+.card {
+  width: calc(33.333% - 15px);
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.slider {
+  position: relative;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.slides {
+  display: flex;
+  transition: all 0.4s;
+}
+.slider:hover .slider-button {
+  opacity: 1;
+}
+
+.slide {
+  min-width: 100%;
+  width: 100%;
+  aspect-ratio: 1.3;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.bage {
+  padding: 6px 10px;
+  border-radius: 15px;
+  background-color: #004d59;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.slider-button {
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url(../images/arrow-left.svg) center center/20px no-repeat;
+  opacity: 0;
+  transition: all 0.4s;
+  color: transparent;
+  background-color: #fff;
+  width: 35px;
+  height: 25px;
+  outline: none;
+  border: none;
+  z-index: 2;
+}
+
+.slider-button.prev {
+  left: auto;
+  right: 0;
+  background-image: url(../images/arrow-right.svg);
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.pagination span.active {
+  color: #898989;
+}
+
+.pagination span {
+  cursor: pointer;
+}
+
+.pagination-prev {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/prev.svg) center center/contain;
+}
+
+.pagination-prev.disabled {
+  opacity: 0.7;
+}
+
+.pagination-next {
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url(../images/next.svg) center center/contain;
+}
+
+.pagination-next.disabled {
+  opacity: 0.7;
+}
+
+.wishlist {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url(../images/wishlist.svg) center center/17px #fff no-repeat;
+  z-index: 3;
+}
+
+.detail {
+  padding: 15px 15px 10px;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.detail-name {
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-price {
+  font-weight: 600;
+  font-size: 15px;
+  color: tomato;
+  justify-self: end;
+}
+
+.detail-address {
+  background: url(../images/location.svg) left center/15px no-repeat;
+  padding-left: 20px;
+  font-size: 12.5px;
+  font-weight: 500;
+  margin: 15px 0 20px;
+}
+
+.detail-attrs {
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+}
+
+.attr {
+  color: #807e7e;
+  font-weight: 500;
+  position: relative;
+}
+
+.attr::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 16px;
+  background: #e5e4e4;
+  height: 100%;
+  width: 1px;
+}
+
+.attr:last-child:after {
+  display: none;
+}
+
+.detail-beds {
+  background: url(../images/beds.svg) left center/15px no-repeat;
+  padding-left: 20px;
+}
+
+.detail-baths {
+  background: url(../images/baths.svg) left center/13px no-repeat;
+  padding-left: 18px;
+}
+
+.detail-sqft {
+  background: url(../images/sqft.svg) left center/18px no-repeat;
+  padding-left: 23px;
+}
+
+@media (max-width: 1200px) {
+  body,
+  html {
+    margin: 0 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .card {
+    width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 767px) {
+  body,
+  html {
+    margin: 0 15px;
+  }
+}
+
+@media (max-width: 640px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body,
+  html {
+    margin: 0 10px;
+  }
+}
