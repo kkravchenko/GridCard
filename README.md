@@ -2,7 +2,7 @@
 
 Адаптивний грід для відображення карток проєктів із кастомною пагінацією та слайдером зображень.
 
-Github repo: https://github.com/kkravchenko/GridCard
+Github repo: https://github.com/kkravchenko/GridCard  
 Netlify: https://gridca.netlify.app/
 
 # RUN
